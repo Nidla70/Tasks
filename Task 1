@@ -1,0 +1,15 @@
+n = int(input())
+brojac = 0 # counter
+trenutni = 1 # second counter
+while brojac < n:
+    trenutni += 1
+    cudan = True #weird number
+    copy = trenutni
+    while copy > 0:
+        if copy % 10 != 2 and copy % 10 != 3:
+            cudan = False
+        copy //= 10
+    if cudan:
+        brojac += 1
+
+print(trenutni)
