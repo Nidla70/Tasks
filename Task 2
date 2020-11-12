@@ -1,0 +1,24 @@
+def prime_numbers(n: int) -> int:
+
+    number_of_primes = 0
+    current_number = 2
+
+    while number_of_primes < n:
+        prime = True
+        for i in range(2, current_number):
+            if current_number % i == 0:
+                prime = False
+                break
+
+
+        if prime:
+            number_of_primes += 1
+
+        current_number += 1
+
+    return current_number-1
+
+
+n = int(input())
+
+print("The required prime number is",prime_numbers(n))
